@@ -26,7 +26,7 @@ Run the miner like this, substituting your label and address:
 # Solo mining
 ./qubic-pool-sat SARGEsLaptop4090 LVMMXNAABKUVYGFUSPUTVPVABARALIUZGNLQJZLXEEOAIKBNGDKUIZICAUFE false
 
-# Share based mining (for slow GPUs)
+# Share based mining (for slow GPUs) - NOT SUPPORTED AS OF 2024-12-04
 ./qubic-pool-sat SARGEsLaptop4090 LVMMXNAABKUVYGFUSPUTVPVABARALIUZGNLQJZLXEEOAIKBNGDKUIZICAUFE true
 ```
 
@@ -37,6 +37,15 @@ Run the miner like this, substituting your label and address:
 # Solo mining
 ./qubic-pool-cutoff SARGEsLaptop4090 LVMMXNAABKUVYGFUSPUTVPVABARALIUZGNLQJZLXEEOAIKBNGDKUIZICAUFE false
 
-# Share based mining (for slow GPUs)
+# Share based mining (for slow GPUs) - NOT SUPPORTED AS OF 2024-12-04
 ./qubic-pool-cutoff SARGEsLaptop4090 LVMMXNAABKUVYGFUSPUTVPVABARALIUZGNLQJZLXEEOAIKBNGDKUIZICAUFE true
+```
+
+# Installation on HiveOS:
+Follow the CUDA instructions for Ubuntu 20.04:
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get install cuda-toolkit-12-6 nvidia-open
 ```
