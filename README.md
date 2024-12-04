@@ -1,6 +1,8 @@
 # 3rd-party-miners
 Mining software by @rserge for Qubic Solutions
+
 The Pool's discord server is here: https://discord.gg/cdhzWCDC
+
 The general guide on how to work with the pool is here: https://github.com/Qubic-Solutions
 
 # Requirements
