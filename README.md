@@ -49,3 +49,14 @@ sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get update
 sudo apt-get install cuda-toolkit-12-6 nvidia-open
 ```
+
+# IDLE command
+You need to provide the amount of work at once parameter, then the IDLE command. If your IDLE command contains arguments, you need to use quotes. Or consider writing a wrapper shell script which you can run without arguments. Below are a few examples:
+```
+# Experimental miner (now we know it loses 10-20% of solutions)
+./qubic-pool-cutoff SARGEsLaptop4090 LVMMXNAABKUVYGFUSPUTVPVABARALIUZGNLQJZLXEEOAIKBNGDKUIZICAUFE false 5 IDLE_COMMAND
+
+# Stable miner
+./qubic-pool-sat SARGEsLaptop4090 LVMMXNAABKUVYGFUSPUTVPVABARALIUZGNLQJZLXEEOAIKBNGDKUIZICAUFE false 2 IDLE_COMMAND
+```
+Note that for the experimental miner, we run like 5 batches at once, while for a stable miner we run like 2 batches at once. This may affect the it/s, so you can experiment with this.
